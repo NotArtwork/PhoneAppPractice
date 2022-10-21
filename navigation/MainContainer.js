@@ -7,13 +7,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 // Importing Screens
 import HomeScreen from './screens/HomeScreen';
-import DetailsScreen from './screens/DetailsScreen';
+import StudentScreen from './screens/StudentScreen';
 import SettingsScreen from './screens/SettingsScreen';
 
 // Importing Screen Names
 const homeName = 'Home'
-const detailsName = 'Details'
-const settingsName = 'Settings'
+const studentName = 'Students'
+const menuName = 'Menu'
+const logoutName = 'Logout'
 
 const Tab = createBottomTabNavigator()
 
@@ -29,10 +30,12 @@ export default function MainContainer() {
 
                     if (rn === homeName) {
                         iconName = focused ? 'home' : 'home-outline'
-                    } else if ( rn === detailsName) {
-                        iconName = focused ? 'list' : 'list-outline'
-                    } else if (rn === settingsName) {
-                        iconName = focused ? 'settings' : 'settings-outline'
+                    } else if ( rn === studentName) {
+                        iconName = focused ? 'people' : 'people-outline'
+                    } else if (rn === logoutName) {
+                        iconName = focused ? 'logout' : 'logout-outline'
+                    } else if (rn === menuName) {
+                        iconName = focused ? 'menu' : 'menu-outline'
                     }
 
                     return <Ionicons name={iconName}  size={size} color={color}/>
@@ -47,8 +50,9 @@ export default function MainContainer() {
                 }}
 >
             <Tab.Screen name={homeName} component={HomeScreen} />
-            <Tab.Screen name={detailsName} component={DetailsScreen} />
-            <Tab.Screen name={settingsName} component={SettingsScreen} />
+            <Tab.Screen name={studentName} component={StudentScreen} />
+            <Tab.Screen name={menuName} component={HomeScreen} />
+            <Tab.Screen name={logoutName} component={SettingsScreen} />
 
             </Tab.Navigator>
         </NavigationContainer>
