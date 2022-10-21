@@ -1,23 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import * as React from 'react'
+import MainContainer from './navigation/MainContainer'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>
-          Does this work?
-      </Text>
-      <StatusBar style="auto" />
-      <Button  title="Log in"/>
-    </View>
-  );
+  return(
+    <MainContainer> </MainContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

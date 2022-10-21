@@ -14,14 +14,13 @@ export default function HomeScreen({navigation}) {
 
         </View>
     )
-
+    
+    // const styles = StyleSheet.create({
+    //     container: {
+    //         flex: 1,
+    //         backgroundColor: '#fff',
+    //         alignItems: 'center',
+    //         justiftContent: 'center'
+    //     }
+    // })
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justiftContent: 'center'
-    }
-})
