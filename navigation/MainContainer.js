@@ -18,7 +18,13 @@ const logoutName = 'Logout'
 
 const Tab = createBottomTabNavigator()
 
-export default function MainContainer() {
+
+export default function MainContainer({ isLoggedIn, setIsLoggedIn }) {
+
+    const handleLogout = () => {
+        setIsLoggedIn(false)
+    }
+
     return(
         <NavigationContainer>
             <Tab.Navigator
@@ -33,7 +39,7 @@ export default function MainContainer() {
                     } else if ( rn === studentName) {
                         iconName = focused ? 'people' : 'people-outline'
                     } else if (rn === logoutName) {
-                        iconName = focused ? 'logout' : 'logout-outline'
+                        iconName = focused ? 'log-out' : 'log-out-outline'
                     } else if (rn === menuName) {
                         iconName = focused ? 'menu' : 'menu-outline'
                     }
@@ -52,9 +58,11 @@ export default function MainContainer() {
             <Tab.Screen name={homeName} component={HomeScreen} />
             <Tab.Screen name={studentName} component={StudentScreen} />
             <Tab.Screen name={menuName} component={HomeScreen} />
-            <Tab.Screen name={logoutName} component={SettingsScreen} />
-
+            <Tab.Screen name={logoutName}
+                        children={() => <SettingsScreen handleLogout={handleLogout} />}
+/>
             </Tab.Navigator>
+             {/* {!isLoggedIn ? <SettingsScreen handleLogout={handleLogout} /> : null} */}
         </NavigationContainer>
     )
 }

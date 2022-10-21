@@ -1,0 +1,39 @@
+{
+    "students": [
+    {
+    "id": 1,
+    "first_name": "Taleb",
+    "last_name": "last_name",
+    "occupation": "Senior Full Stack Developer"
+},
+    
+    {
+    "id": 2,
+    "first_name": "Meng",
+    "last_name": "last_name",
+    "occupation": "Junior Full Stack Developer"
+},
+
+    {
+    "id": 3,
+    "first_name": "Bennet",
+    "last_name": "last_name",
+    "occupation": "Full Stack Developer"
+},
+
+    {
+    "id": 4,
+    "first_name": "Antonio",
+    "last_name": "Arce",
+    "occupation": "Full Stack Developer"
+},
+
+    {
+    "id": 5,
+    "first_name": "Patrick",
+    "last_name": "Donohue",
+    "occupation": "Senior Full Stack Developer"
+}
+
+
+]}

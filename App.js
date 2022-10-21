@@ -7,7 +7,7 @@ export default function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return(
-    isLoggedIn ? <MainContainer /> : <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+    isLoggedIn ? <MainContainer isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} /> : <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
     // <MainContainer> </MainContainer>
   )
 }

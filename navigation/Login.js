@@ -10,7 +10,9 @@ export default function Login({ isLoggedIn, setIsLoggedIn}) {
 
     const styles = StyleSheet.create({
         container: {
+            top: 250,
             left: 0,
+            display: 'flex',
             flex: 1,
             backgroundColor: '#fff',
             alignItems: 'center',
@@ -19,12 +21,15 @@ export default function Login({ isLoggedIn, setIsLoggedIn}) {
         inputView: {
             backgroundColor: "black",
             borderRadius: 30,
-            width: "70%",
+            width: "80%",
             height: 45,
+            marginTop: 10,
             marginBottom: 20,
+            justiftContent: 'space-between',
             alignItems: "center",
         },
         TextInput: {
+            width: 100,
             height: 50,
             flex: 1,
             padding: 10,
@@ -74,7 +79,7 @@ export default function Login({ isLoggedIn, setIsLoggedIn}) {
 
             <Button 
             title="Login"
-            onPress={() => handleLogin} />
+            onPress={() => handleLogin()} />
 
         </View>
     )
